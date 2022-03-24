@@ -1,7 +1,7 @@
-id: hp-m605-weblogin
+id: hp-m605-webserver
 
 info:
-  name: HP LaserJet M605 Web Login 
+  name: HP LaserJet M605 Web Server 
   author: alexrydzak
   severity: info
   tags: hp,web,panel
@@ -10,7 +10,7 @@ requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-      - "{{BaseURL}}/hp/device/SignIn/Index/"
+      - "{{BaseURL}}/hp/device/DeviceStatus/Index"
 
     matchers-condition: and
     matchers:
