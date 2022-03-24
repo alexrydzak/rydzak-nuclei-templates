@@ -1,0 +1,23 @@
+id: hp-m605-weblogin
+
+info:
+  name: HP LaserJet M605 Web Login 
+  author: alexrydzak
+  severity: info
+  tags: hp,web,panel
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+      - "{{BaseURL}}/hp/device/SignIn/Index/"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - '<strong class="product">HP LaserJet M605</strong>'
+
+      - type: status
+        status:
+          - 200
