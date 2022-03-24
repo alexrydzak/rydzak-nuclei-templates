@@ -10,7 +10,7 @@ requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-      - "{{BaseURL}}/hp/device/DeviceStatus/Index"
+      - "{{BaseURL}}/hp/device/"
 
     matchers-condition: and
     matchers:
