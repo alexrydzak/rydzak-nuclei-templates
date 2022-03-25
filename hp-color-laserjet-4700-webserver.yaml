@@ -15,7 +15,7 @@ requests:
     matchers:
       - type: word
         words:
-          - '<span class="hpBannerTextBig">HP Color LaserJet 4700 Printers</span>'
+          - 'HP Color LaserJet 4700 Printers'
 
       - type: status
         status:
