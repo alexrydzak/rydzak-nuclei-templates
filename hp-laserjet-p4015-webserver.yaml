@@ -15,7 +15,7 @@ requests:
     matchers:
       - type: word
         words:
-          - '<h1>HP LaserJet P4015 Printers</h1>'
+          - 'HP LaserJet P4015'
 
       - type: status
         status:
