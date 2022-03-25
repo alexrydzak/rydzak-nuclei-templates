@@ -9,8 +9,7 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
-      - "{{BaseURL}}/hp/device/"
+      - "{{BaseURL}}/hp/device/this.LCDispatcher?nav=hp.DeviceStatus"
 
     matchers-condition: and
     matchers:
