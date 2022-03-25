@@ -1,0 +1,22 @@
+id: toshiba-topaccess-webserver
+
+info:
+  name: Toshiba TopAccess Web Server 
+  author: alexrydzak
+  severity: info
+  tags: toshiba,web,panel
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/?MAIN=TOPACCESS"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Login with your TopAccess User Name and Password.'
+
+      - type: status
+        status:
+          - 200
