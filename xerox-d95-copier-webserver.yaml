@@ -9,7 +9,6 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
       - "{{BaseURL}}/stat.htm"
 
     matchers-condition: and
