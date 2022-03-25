@@ -9,7 +9,7 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}/hp/device/DeviceStatus/Index"
 
     matchers-condition: and
     matchers:
