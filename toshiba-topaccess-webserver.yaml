@@ -15,7 +15,7 @@ requests:
     matchers:
       - type: word
         words:
-          - 'Login with your TopAccess User Name and Password.'
+          - '<!--<title class="clsTitle1">TopAccess</title>-->'
 
       - type: status
         status:
