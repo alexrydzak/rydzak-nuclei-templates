@@ -1,0 +1,22 @@
+id: ricoh-pro8320-webserver
+
+info:
+  name: Ricoh Fiery/EFI Pro8320 Web Server 
+  author: alexrydzak
+  severity: info
+  tags: hp,web,panel
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/wt4/home?lang=en"
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - '<span id="id-server-name-header" class="header-text">Pro8320-1</span>'
+
+      - type: status
+        status:
+          - 200
