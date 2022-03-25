@@ -15,7 +15,7 @@ requests:
     matchers:
       - type: word
         words:
-          - '<span id="id-server-name-header" class="header-text">Pro8320-1</span>'
+          - 'Pro8320'
 
       - type: status
         status:
