@@ -9,8 +9,6 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}/index.html"
-      - "{{BaseURL}}/hp/device/this.LCDispatcher"
       - "{{BaseURL}}/hp/device/this.LCDispatcher?nav=hp.DeviceStatus"
 
     matchers-condition: and
