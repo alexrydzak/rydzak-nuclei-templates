@@ -9,7 +9,6 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
       - "{{BaseURL}}/home.html"
 
     matchers-condition: and
