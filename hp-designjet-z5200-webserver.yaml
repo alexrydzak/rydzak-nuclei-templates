@@ -9,7 +9,6 @@ info:
 requests:
   - method: GET
     path:
-      - "{{BaseURL}}"
       - "{{BaseURL}}/hp/device/webAccess/index.htm"
 
     matchers-condition: and
