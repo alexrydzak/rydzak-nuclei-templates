@@ -1,0 +1,25 @@
+id: oracle-weblogic-adminconsole-version-detection
+
+info:
+  name: Oracle WebLogic Server Admin Console Version Detection 
+  author: alexrydzak
+  severity: info
+  tags: oracle,weblogic,web,panel
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}:7001/console/login/LoginForm.jsp"
+
+      matchers:
+        - type: word
+          words:
+            - "WebLogic Server Version:"
+          part: body
+          condition: and
+      extractors:
+        - type: regex
+          name: weblogic_version
+          part: body
+          regex:
+            - "WebLogic Server Version:\s*(\S+)"
