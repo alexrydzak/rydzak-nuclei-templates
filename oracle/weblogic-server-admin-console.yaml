@@ -4,6 +4,7 @@ info:
   name: Oracle WebLogic Server Admin Console Version Detection 
   author: alexrydzak
   severity: info
+  description: Detects Oracle WebLogic Server Admin Console and extracts version number from footer
   tags: oracle,weblogic,web,panel
 
 requests:
