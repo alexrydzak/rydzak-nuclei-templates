@@ -1,4 +1,4 @@
-id: oracle-weblogic-adminconsole-version-detection
+id: oracle-weblogic-panel
 
 info:
   name: Oracle WebLogic Server Admin Console Version Detection 
@@ -18,6 +18,9 @@ requests:
             - "WebLogic Server Version:"
           part: body
           condition: and
+        - type: status
+        status:
+          - 200
       extractors:
         - type: regex
           name: weblogic_version
