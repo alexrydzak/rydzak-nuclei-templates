@@ -11,7 +11,10 @@ http:
   - method: GET
     path:
       - "http://{{BaseURL}}:7001/console/login/LoginForm.jsp"
-      - "https://{{BaseURL}}:7001/console/login/LoginForm.jsp"
+      - "{{BaseURL}}:7001/console/login/LoginForm.jsp"
+
+    host-redirects: true
+    max-redirects: 3
 
     matchers-condition: and
     matchers:
@@ -19,9 +22,7 @@ http:
         part: body
         words:
           - "WebLogic Server Version:"
-      - type: status
-        status:
-          - 200
+
     extractors:
       - type: regex
         part: body
