@@ -7,23 +7,23 @@ info:
   description: Detects Oracle WebLogic Server Admin Console and extracts version number from footer
   tags: oracle,weblogic,web,panel
 
-requests:
+http:
   - method: GET
     path:
-      - "{{BaseURL}}:7001/console/login/LoginForm.jsp"
+      - "http://{{BaseURL}}:7001/console/login/LoginForm.jsp"
+      - "https://{{BaseURL}}:7001/console/login/LoginForm.jsp"
 
-      matchers:
-        - type: word
-          words:
-            - "WebLogic Server Version:"
-          part: body
-          condition: and
-        - type: status
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:
+          - "WebLogic Server Version:"
+      - type: status
         status:
           - 200
-      extractors:
-        - type: regex
-          name: weblogic_version
-          part: body
-          regex:
-            - "WebLogic Server Version:\s*(\S+)"
+    extractors:
+      - type: regex
+        part: body
+        regex:
+          - "WebLogic Server Version:\\s*(\\S+)"
