@@ -12,6 +12,8 @@ http:
     path:
       - "http://{{BaseURL}}:7001/console/login/LoginForm.jsp"
       - "{{BaseURL}}:7001/console/login/LoginForm.jsp"
+      - "https://{{BaseURL}}:7002/console/login/LoginForm.jsp"
+      - "{{BaseURL}}:7002/console/login/LoginForm.jsp"
 
     host-redirects: true
     max-redirects: 3
